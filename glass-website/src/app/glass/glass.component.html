@@ -1,0 +1,7 @@
+<section class="glass">
+  <app-side-nav></app-side-nav>
+  <div class="games">
+    <app-search (emitGame)="receiveGame($event)"></app-search>
+    <app-list-games [game]="game"></app-list-games>
+  </div>
+</section>

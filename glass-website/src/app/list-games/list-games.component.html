@@ -1,0 +1,7 @@
+<div class="cards" *ngIf="!game">
+    <app-game *ngFor="let games of list" [name]="games.name" [plataform]="games.plataform" [progress]="games.progress" [image]="games.image"></app-game>
+</div>
+
+<div class="cards" *ngIf="game">
+    <app-game *ngFor="let games of list | searchGame: game" [name]="games.name" [plataform]="games.plataform" [progress]="games.progress" [image]="games.image"></app-game>
+</div>
